@@ -2,21 +2,21 @@
 
 // class AuthService {
 //   static User? _currentUser;
-  
+
 //   // Get current logged in user
 //   static User? get currentUser => _currentUser;
-  
+
 //   // Check if user is logged in
 //   static bool get isLoggedIn => _currentUser != null;
-  
+
 //   // Check if current user is admin
 //   static bool get isAdmin => _currentUser?.isAdmin ?? false;
-  
+
 //   // Login method with role detection
 //   static Future<bool> login(String email, String password) async {
 //     // Simulate API call
 //     await Future.delayed(Duration(seconds: 1));
-    
+
 //     // Mock user data - In real app, this comes from your backend
 //     if (email == "admin@mysociety.com") {
 //       _currentUser = User(
@@ -39,15 +39,15 @@
 //       );
 //       return true;
 //     }
-    
+
 //     return false;
 //   }
-  
+
 //   // Register method
 //   static Future<bool> register(String username, String email, String buildingNumber, String password) async {
 //     // Simulate API call
 //     await Future.delayed(Duration(seconds: 1));
-    
+
 //     // Default role is user for new registrations
 //     _currentUser = User(
 //       id: DateTime.now().millisecondsSinceEpoch.toString(),
@@ -57,15 +57,15 @@
 //       mobileNumber: "",
 //       role: UserRole.user,
 //     );
-    
+
 //     return true;
 //   }
-  
+
 //   // Logout method
 //   static void logout() {
 //     _currentUser = null;
 //   }
-  
+
 //   // Update user profile
 //   static void updateProfile(User updatedUser) {
 //     _currentUser = updatedUser;
@@ -101,7 +101,7 @@ class AuthService {
         'username': 'Varsha Solanki',
         'email': 'admin@mysociety.com',
         'buildingNumber': 'B-302',
-        'mobileNumber': '+91 98765 43210',
+        // 'mobileNumber': '+91 98765 43210',
         'role': UserRole.admin,
         'password': 'admin123',
       },
@@ -110,7 +110,7 @@ class AuthService {
         'username': 'John Doe',
         'email': 'user@mysociety.com',
         'buildingNumber': 'A-101',
-        'mobileNumber': '+91 87654 32109',
+        // 'mobileNumber': '+91 87654 32109',
         'role': UserRole.user,
         'password': 'user123',
       },
@@ -119,7 +119,7 @@ class AuthService {
         'username': 'Priya Sharma',
         'email': 'resident1@mysociety.com',
         'buildingNumber': 'C-205',
-        'mobileNumber': '+91 98123 45678',
+        // 'mobileNumber': '+91 98123 45678',
         'role': UserRole.user,
         'password': 'priya123',
       },
@@ -128,7 +128,7 @@ class AuthService {
         'username': 'Rahul Patel',
         'email': 'admin2@mysociety.com',
         'buildingNumber': 'A-401',
-        'mobileNumber': '+91 97654 32110',
+        // 'mobileNumber': '+91 97654 32110',
         'role': UserRole.admin,
         'password': 'rahul123',
       },
@@ -142,9 +142,9 @@ class AuthService {
           username: userData['username'],
           email: userData['email'],
           buildingNumber: userData['buildingNumber'],
-          mobileNumber: userData['mobileNumber'],
+          // mobileNumber: userData['mobileNumber'],
           role: userData['role'],
-          createdAt: DateTime.now(), // ✅ Fix here
+          createdAt: DateTime.now(), mobileNumber: '', // ✅ Fix here
         );
         return true;
       }
@@ -154,10 +154,14 @@ class AuthService {
   }
 
   // Register method
-  static Future<bool> register(String username, String email, String buildingNumber, String password) async {
+  static Future<bool> register(String username, String email,
+      String buildingNumber, String password) async {
     await Future.delayed(const Duration(seconds: 1));
 
-    if (username.isEmpty || email.isEmpty || buildingNumber.isEmpty || password.isEmpty) {
+    if (username.isEmpty ||
+        email.isEmpty ||
+        buildingNumber.isEmpty ||
+        password.isEmpty) {
       return false;
     }
 
@@ -193,7 +197,8 @@ class AuthService {
     _currentUser = updatedUser;
   }
 
-  static Future<bool> changePassword(String currentPassword, String newPassword) async {
+  static Future<bool> changePassword(
+      String currentPassword, String newPassword) async {
     if (_currentUser == null) return false;
     await Future.delayed(const Duration(milliseconds: 500));
     return true;
