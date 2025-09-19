@@ -74,7 +74,8 @@ import 'screens/notice_communication_screen.dart';
 import 'screens/maintenance_billing_screen.dart';
 import 'screens/account_finance_screen.dart';
 import 'screens/member_resident_screen.dart';
-import 'screens/auth_wrapper.dart'; // ✅ Import AuthWrapper
+import 'screens/auth_wrapper.dart';
+
 
 void main() {
   runApp(MySocietyApp());
@@ -96,7 +97,9 @@ class MySocietyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),
         '/forgot-password': (context) => ForgotPasswordScreen(),
-        '/dashboard': (context) => DashboardScreen(userName: '',),
+        '/dashboard': (context) => DashboardScreen(
+              userName: '',
+            ),
         '/profile': (context) => ProfileRouterScreen(),
         '/notice': (context) => NoticeCommunicationScreen(),
         '/maintenance': (context) => MaintenanceBillingScreen(),
