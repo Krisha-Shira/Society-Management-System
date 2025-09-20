@@ -1,49 +1,4 @@
-// import 'package:flutter/material.dart';
-// import 'app_colors.dart';
 
-// class CustomTextField extends StatelessWidget {
-//   final String hintText;
-//   final IconData prefixIcon;
-//   final bool obscureText;
-//   final TextEditingController? controller;
-//   final Widget? suffixIcon;
-
-//   const CustomTextField({
-//     Key? key,
-//     required this.hintText,
-//     required this.prefixIcon,
-//     this.obscureText = false,
-//     this.controller,
-//     this.suffixIcon, required TextInputType keyboardType,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: EdgeInsets.symmetric(vertical: 8),
-//       decoration: BoxDecoration(
-//         color: AppColors.white.withOpacity(0.9),
-//         borderRadius: BorderRadius.circular(8),
-//       ),
-//       child: TextFormField(
-//         controller: controller,
-//         obscureText: obscureText,
-//         decoration: InputDecoration(
-//           hintText: hintText,
-//           prefixIcon: Icon(prefixIcon, color: AppColors.darkGrey),
-//           suffixIcon: suffixIcon,
-//           border: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(8),
-//             borderSide: BorderSide.none,
-//           ),
-//           filled: true,
-//           fillColor: AppColors.white.withOpacity(0.9),
-//           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-//         ),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
 

@@ -27,7 +27,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'splash_screen.dart';
-import 'login_screen.dart';
+// import 'login_screen.dart';
 import 'dashboard_screen.dart';
 
 class AuthWrapper extends StatefulWidget {
@@ -39,7 +39,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
   bool _isLoading = true;
   bool _isLoggedIn = false;
   String? _userName;
-  String? _userEmail;
+  // String? _userEmail;
   String? _buildingInfo;
 
   @override
@@ -58,13 +58,13 @@ class _AuthWrapperState extends State<AuthWrapper> {
       // Check if user is logged in
       bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
       String? userName = prefs.getString('userName');
-      String? userEmail = prefs.getString('userEmail');
+      // String? userEmail = prefs.getString('userEmail');
       String? buildingInfo = prefs.getString('buildingInfo');
       
       setState(() {
         _isLoggedIn = isLoggedIn;
         _userName = userName;
-        _userEmail = userEmail;
+        // _userEmail = userEmail;
         _buildingInfo = buildingInfo;
         _isLoading = false;
       });

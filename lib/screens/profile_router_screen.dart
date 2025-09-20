@@ -1,37 +1,4 @@
-// import 'package:flutter/material.dart';
-// import '../utils/auth_service.dart';
-// import 'profile_screen.dart';
-// import 'admin_profile_screen.dart';
 
-// class ProfileRouterScreen extends StatelessWidget {
-//   const ProfileRouterScreen({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // Check user role and navigate to appropriate profile screen
-//     if (AuthService.isAdmin) {
-//       return const AdminProfileScreen();
-//     } else {
-//       return const ProfileScreen();
-//     }
-//   }
-// }
-// import 'package:flutter/material.dart';
-// import '../utils/auth_service.dart';
-// import 'profile_screen.dart';
-// import 'admin_profile_screen.dart';
-
-// class ProfileRouterScreen extends StatelessWidget {
-//   const ProfileRouterScreen({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // Check user role and navigate to appropriate profile screen
-//     return AuthService.isAdmin
-//         ? const AdminProfileScreen()
-//         : const ProfileScreen();
-//   }
-// }
 
 import 'package:flutter/material.dart';
 import '../utils/auth_service.dart';
